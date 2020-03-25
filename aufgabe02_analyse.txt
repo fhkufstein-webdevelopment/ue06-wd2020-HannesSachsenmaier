@@ -1,0 +1,48 @@
+Welche URL wird aufgerufen wenn Sie versuchen sich anzumelden?
+/login
+
+Welche „Method“ wird im Reiter Network angezeigt?
+POST
+
+Welche URL wird aufgerufen wenn Sie versuchen sich zu registrieren?
+/login
+
+Welche „Method“ wird im Reiter Network angezeigt?
+POST
+
+Versuchen Sie einen Nutzer mit dem Namen test zu registrieren – wie ist der
+Response? (Chrome Entwicklertools: Network -> klick bei Name auf login ->
+Response)
+
+
+Melden Sie sich an:
+o Benutzername: test
+o Passwort: testpassword
+Legen Sie eine Neue Adresse an – wie ist hier die Method? Wie lautet der
+Name/aufgerufene URL?
+GET /Index
+
+• Bearbeiten Sie eine Adresse und klicken Sie auf speichern – wie ist hier die Method?
+(evtl. Haken bei „Preserve log“ setzen) Wie lautet hier der Name/aufgerufene
+URL?.../api/adress/?returnView_true&id=1
+
+
+• Löschen Sie die neu angelegte Adresse – wie ist hier die Method? Wie lautet
+hier der Name/aufgerufene URL?
+.../api/adress/?returnView_true&id=1 ; Methode GET
+
+• Probieren Sie einmal eine eigene Route anzulegen. Beispielsweise, dass Sie
+eine zusätzliche url für den Login definieren (z.B. /anmelden) – der LoginController
+soll aber weiterhin verwendet werden. Dies können Sie in der Datei includes/
+routes.php vornehmen. Rufen Sie anschließend die URL auf.
+
+• Sehen Sie sich mal ein paar Views in dem Ordner includes/views an. Werfen
+Sie insbesondere einen Blick auf die Datei includes/views/parts/header.php
+Hier wurde PHP Code in das HTML Dokument geschrieben. Sie nannten es Spaghetti-Code.
+Das sollte doch eigentlich nicht sein oder? Wird das in diesem Fall gemacht, da sich
+Header ändert je nach datei (index, login,...)????
+
+• Versuchen Sie nachzuvollziehen wie der View die Daten erhält. Offenbar wird
+im Controller mittels $this->view->variablenname = "wert“; ein Wert gesetzt.
+Auf diesen kann dann im view selbst mit $this->variablenname zugegriffen
+werden.
